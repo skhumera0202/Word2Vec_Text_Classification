@@ -1,0 +1,28 @@
+
+# Virtual Environment
+.venv/
+venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+
+# Dataset
+data/*
+
+# Trained Models
+models/*
+
+# Keep folders visible in GitHub
+!data/.gitkeep
+!models/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
