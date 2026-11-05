@@ -274,8 +274,36 @@ joblib.dump(
 
 print("\nRandom Forest Model Saved!")
 
+# -----------------------------------
+# 14.  Random Forest Confusion Matrix
+# -----------------------------------
+
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+
+rf_cm = confusion_matrix(y_test, rf_predictions)
+
+rf_display = ConfusionMatrixDisplay(
+    confusion_matrix=rf_cm,
+    display_labels=["Ham", "Spam"]
+)
+
+rf_display.plot(cmap="Oranges")
+
+plt.title("Random Forest Confusion Matrix")
+
+plt.tight_layout()
+
+plt.savefig(
+    RESULTS_DIR / "random_forest_confusion_matrix.png",
+    dpi=300
+)
+
+plt.show()
+
+print("\nRandom Forest Confusion Matrix Saved!")
+
 #------------------------------------
-# 14. Model Comparison Chart
+# 15. Model Comparison Chart
 # -----------------------------------
 
 import matplotlib.pyplot as plt
